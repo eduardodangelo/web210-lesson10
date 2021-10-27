@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+body {
+  height: 100vh;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+  width: 80%;
+}
+
+.nav-container {
+  background: #6700ee;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+}
+
+header .logo {
+  color: #00f7ff;
+  font-weight: bold;
+}
+
+header ul {
+  display: flex;
+}
+
+header ul a {
+  display: block;
+  padding: 0 1em;
+}
+
+.hero {
+  background: #6e00ff;
+  color: #fff;
+  display: grid;
+  text-align: center;
+  padding: 4em;
+}
+
+.meet {
+  font-weight: bold;
+  color: #e74835;
+  cursor: pointer;
+}
+
+.scroll {
+  stroke: #fff;
+  width: 30px;
+  margin-top: 2em;
+  cursor: pointer;
+}
+
+section {
+  padding: 4em 2em;
+  text-align: center;
+}
+
+.featured {
+  position: relative;
+}
+
+.featured::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #e5d5fa;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.subtitle {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #6e00ff;
+  letter-spacing: 0.2em;
+  font-size: 0.85em;
+}
+
+.featured-title {
+  color: #000;
+  font-weight: bold;
+  font-size: 1.3em;
+  margin-top: -0.4em;
+  display: block;
+}
+
+.featured-desc {
+  color: #252525;
+  margin-bottom: 3em;
+  font-size: 0.9em;
+  line-height: 1.8em;
+  font-weight: 500;
+}
+
+.skills {
+  background: #6e00ff;
+}
+
+.skills-container ul li {
+  background: #fff;
+  padding: 2em;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.skills-container ul li .icon-container {
+  height: 100px;
+  display: grid;
+  place-content: center;
+}
+
+.skill-title {
+  font-weight: bold;
+}
+
+.featured-desc {
+  margin-bottom: 2em;
+}
+
+.portfolio {
+  background: #f7f7f7;
+}
+
+.portfolio-container a img {
+  border-radius: 1em;
+  margin-bottom: 2em;
+}
+
+.social-header ul {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+footer {
+  color: #fff;
+  background-color: #6700ee;
+}
+
+footer li {
+  padding: 10px 15px;
+}
+
+footer a {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+}
+
+footer i {
+  cursor: pointer;
+  font-size: 30px;
+}
+
+footer p {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.flex-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.name {
+  display: flex;
+  justify-content: center;
+}
+
+.name span {
+  color: #00f7ff;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media screen and (min-width: 750px) {
+  .featured,
+  .portfolio {
+    text-align: left;
+  }
+
+  .featured,
+  .portfolio-container {
+    display: grid;
+    grid-template-columns: 40% auto;
+  }
+
+  .left,
+  .portfolio-left {
+    display: grid;
+    place-content: center;
+  }
+
+  .right {
+    margin-left: 2em;
+    margin-top: 1em;
+    border-radius: 1em;
+  }
+
+  .skills {
+    margin-top: -5em;
+    margin-bottom: -7em;
+    padding-top: 7em;
+  }
+
+  .skills-container ul {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 1em;
+  }
+
+  .portfolio {
+    padding-top: 7em;
+  }
+
+  .portfolio-container img {
+    margin-right: 1em;
+  }
+
+  .portfolio-left {
+    margin-right: 4em;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  header {
+    display: block;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .featured::before {
+    display: none;
+  }
+}
